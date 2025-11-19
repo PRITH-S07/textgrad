@@ -31,7 +31,7 @@ class LlamaEngine(EngineLM):
 
     def __init__(
         self,
-        model_string: str = "meta-llama/Meta-Llama-3-8B",
+        model_string: str = "meta-llama/Meta-Llama-3-8B-Instruct",
         system_prompt: str = DEFAULT_SYSTEM_PROMPT,
         device: str = "cuda" if torch.cuda.is_available() else "cpu",
         load_in_8bit: bool = False,
@@ -244,7 +244,7 @@ class LlamaEngine(EngineLM):
 # Example usage
 def example_usage():
     engine = LlamaEngine(
-        model_string="meta-llama/Meta-Llama-3-8B",
+        model_string="meta-llama/Meta-Llama-3-8B-Instruct",
         device="cuda" if torch.cuda.is_available() else "cpu",
         load_in_8bit=False,
         cache=True,
